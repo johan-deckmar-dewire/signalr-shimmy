@@ -1273,11 +1273,7 @@ var jQueryShim = require('./jQueryShim');
             var baseUrl = transport === "webSockets" ? "" : connection.baseUrl,
                 url = baseUrl + connection.appRelativeUrl,
                 qs = "transport=" + transport;
-
-            // take my url, if not the same!
-            if (url != connection.url) {
-                url = connection.url;
-            }
+                
 
             if (!ajaxPost && connection.groupsToken) {
                 qs += "&groupsToken=" + window.encodeURIComponent(connection.groupsToken);
